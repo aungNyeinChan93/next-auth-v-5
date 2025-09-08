@@ -4,6 +4,7 @@ import React from "react";
 export const navlinks = [
   { name: "home", path: "/" },
   { name: "posts", path: "/posts" },
+  { name: "quotes", path: "/quotes" },
   { name: "about", path: "/about" },
 ];
 

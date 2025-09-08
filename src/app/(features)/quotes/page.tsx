@@ -8,7 +8,7 @@ const QuotesPage = async () => {
   return (
     <React.Fragment>
       <main className="w-full min-h-screen px-10 my-4">
-        <div className="flex justify-between px-10 my-2">
+        <div className="flex justify-between px-10 py-4 container mx-auto my-2">
           <span>Quotes</span>
           <Link href={"/quotes/create-quote"}>Create Quote</Link>
         </div>

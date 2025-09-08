@@ -1,5 +1,6 @@
 import PostLists from "@/components/features/posts/PostLists";
 import { getAllPosts } from "@/features/posts/helper";
+import { readFile } from "fs";
 import React from "react";
 
 const PostPage = async () => {

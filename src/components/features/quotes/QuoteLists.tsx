@@ -11,7 +11,7 @@ const QuoteLists = ({ quotes }: Props) => {
       <section className="container mx-auto px-10">
         {quotes &&
           (quotes as Array<Quote>).map((quote) => (
-            <h1 key={quote.id} className="p-2 my-2 bg-green-50 rounded-2xl">
+            <h1 key={quote.id} className="p-2 my-4 bg-green-300 rounded-2xl">
               {quote.title}
             </h1>
           ))}
