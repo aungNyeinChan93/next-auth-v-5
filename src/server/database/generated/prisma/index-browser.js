@@ -137,6 +137,21 @@ exports.Prisma.UserScalarFieldEnum = {
   updated_at: 'updated_at'
 };
 
+exports.Prisma.ArticleScalarFieldEnum = {
+  id: 'id',
+  name: 'name',
+  description: 'description',
+  article_image: 'article_image',
+  author_id: 'author_id'
+};
+
+exports.Prisma.CommentScalarFieldEnum = {
+  id: 'id',
+  body: 'body',
+  user_id: 'user_id',
+  article_id: 'article_id'
+};
+
 exports.Prisma.SortOrder = {
   asc: 'asc',
   desc: 'desc'
@@ -150,7 +165,9 @@ exports.Prisma.NullsOrder = {
 
 exports.Prisma.ModelName = {
   Quote: 'Quote',
-  User: 'User'
+  User: 'User',
+  Article: 'Article',
+  Comment: 'Comment'
 };
 
 /**

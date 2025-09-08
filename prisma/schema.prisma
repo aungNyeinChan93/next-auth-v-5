@@ -32,9 +32,35 @@ model User {
   session_id  String?
   token_id    String?
 
+  articles Article[]
+  Comment  Comment[]
+
   created_at DateTime? @default(now())
   updated_at DateTime? @updatedAt
 
   @@index([email])
   @@map("users")
+}
+
+model Article {
+  id            String  @id @default(cuid())
+  name          String
+  description   String?
+  article_image String?
+
+  author    User?  @relation(fields: [author_id], references: [id])
+  author_id String
+
+  comments Comment[]
+}
+
+model Comment {
+  id   String  @id @default(cuid())
+  body String?
+
+  user    User?  @relation(fields: [user_id], references: [id])
+  user_id String
+
+  Article    Article? @relation(fields: [article_id], references: [id])
+  article_id String?
 }

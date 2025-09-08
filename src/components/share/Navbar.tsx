@@ -19,9 +19,9 @@ const Navbar = () => {
           <span className="font-semibold text-lg">HomePro</span>
         </div>
         <nav className="hidden md:flex gap-6 text-sm font-medium">
-          {navlinks?.map((nav) => {
+          {navlinks?.map((nav, idx) => {
             return (
-              <Link href={nav.path} className="hover:text-indigo-600">
+              <Link key={idx} href={nav.path} className="hover:text-indigo-600">
                 <span className=" capitalize text-base font-semibold">
                   {nav.name}
                 </span>
@@ -48,9 +48,9 @@ const Navbar = () => {
 
       {/* mobile view */}
       <div className="md:hidden flex flex-col space-y-2.5 justify-center w-full bg-slate-100 text-center px-10 py-3">
-        {navlinks?.map((nav) => {
+        {navlinks?.map((nav, idx) => {
           return (
-            <Link href={nav.path} className="hover:text-indigo-600">
+            <Link key={idx} href={nav.path} className="hover:text-indigo-600">
               <span className=" capitalize text-base  font-semibold">
                 {nav.name}
               </span>

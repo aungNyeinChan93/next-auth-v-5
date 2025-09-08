@@ -13,6 +13,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { loginWithCredential } from "@/features/auth/actions";
+import { Github } from "lucide-react";
 import { useActionState } from "react";
 
 export function LoginForm() {
@@ -31,6 +32,16 @@ export function LoginForm() {
       <CardContent>
         <form action={formAction}>
           <div className="flex flex-col gap-6">
+            <div className="grid gap-2">
+              <Label htmlFor="name">Name</Label>
+              <Input
+                id="name"
+                type="text"
+                placeholder="chan"
+                required
+                name="name"
+              />
+            </div>
             <div className="grid gap-2">
               <Label htmlFor="email">Email</Label>
               <Input
@@ -61,7 +72,7 @@ export function LoginForm() {
       </CardContent>
       <CardFooter className="flex-col gap-2">
         <Button variant="outline" className="w-full">
-          Login with Google
+          Login with Github <Github />
         </Button>
       </CardFooter>
     </Card>
