@@ -32,7 +32,7 @@ export function LoginForm() {
       <CardContent>
         <form action={formAction}>
           <div className="flex flex-col gap-6">
-            <div className="grid gap-2">
+            {/* <div className="grid gap-2">
               <Label htmlFor="name">Name</Label>
               <Input
                 id="name"
@@ -41,7 +41,7 @@ export function LoginForm() {
                 required
                 name="name"
               />
-            </div>
+            </div> */}
             <div className="grid gap-2">
               <Label htmlFor="email">Email</Label>
               <Input
