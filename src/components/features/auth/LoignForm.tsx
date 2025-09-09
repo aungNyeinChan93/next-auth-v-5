@@ -23,7 +23,11 @@ export function LoginForm() {
       <CardHeader>
         <CardTitle>Login to your account</CardTitle>
         <CardDescription>
-          Enter your email below to login to your account
+          {!state?.success && (
+            <>
+              <p className=" text-red-600 p-2">{state?.error}</p>
+            </>
+          )}
         </CardDescription>
         <CardAction>
           <Button variant="link">Sign Up</Button>
@@ -32,23 +36,13 @@ export function LoginForm() {
       <CardContent>
         <form action={formAction}>
           <div className="flex flex-col gap-6">
-            {/* <div className="grid gap-2">
-              <Label htmlFor="name">Name</Label>
-              <Input
-                id="name"
-                type="text"
-                placeholder="chan"
-                required
-                name="name"
-              />
-            </div> */}
             <div className="grid gap-2">
               <Label htmlFor="email">Email</Label>
               <Input
                 id="email"
                 type="email"
                 placeholder="m@example.com"
-                required
+                // required
                 name="email"
               />
             </div>
@@ -62,7 +56,12 @@ export function LoginForm() {
                   Forgot your password?
                 </a>
               </div>
-              <Input id="password" type="password" required name="password" />
+              <Input
+                id="password"
+                type="password"
+                //  required
+                name="password"
+              />
             </div>
           </div>
           <Button type="submit" className="w-full mt-6">
